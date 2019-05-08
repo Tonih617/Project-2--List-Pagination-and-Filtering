@@ -41,8 +41,10 @@ const div = document.createElement('div');
         students[i].classList.remove();
       }
     }
+    
+    // Append page links function//
    appendPageLinks = (list) => {
-      // Apend page links function//
+      
       if (document.querySelector('.pagination')) {
          removePag = document.querySelector('.pagination')
          removePag.parentNode.removeChild(removePag);
@@ -54,6 +56,7 @@ const div = document.createElement('div');
       pagination.className = 'pagination';
       page.appendChild(pagination);
       pagination.appendChild(pagUl);
+     
       // append li elements based on number of pages it may use//
       for (let i = 1; i < pagesNum + 1; i += 1) {
          let liContent = `
